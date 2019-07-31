@@ -1,0 +1,5 @@
+name: PTP
+version: ${project.version}
+main: io.github.robogaming.ptp.PTP
+api-version: 1.13
+authors: [DoctorRoboctor]
