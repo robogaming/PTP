@@ -1,6 +1,5 @@
 package io.github.robogaming.ptp;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.bukkit.*;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -10,14 +9,11 @@ import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.inventory.InventoryOpenEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
-import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
 
 public final class PTP extends JavaPlugin implements Listener {
     public static boolean minigameStarted = false;
@@ -80,7 +76,7 @@ public final class PTP extends JavaPlugin implements Listener {
                 giveItem(Material.STONE, p, 10);
             }
 
-            p.teleport(new Location(Bukkit.getWorld("world"), (Math.random()*100)+800, 80, (Math.random()*100)+800));
+            p.teleport(new Location(Bukkit.getWorld("world"), (Math.random()*100)-50, 80, (Math.random()*100)-50));
 
             players.remove(index);
         }
